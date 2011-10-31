@@ -1,3 +1,4 @@
+#import "adapters/git.h"
 
 void get_status(SCMContext* ctx);
 NSString* detect(NSString* path);
