@@ -1,4 +1,5 @@
 #import "context.h"
+#import "support.h"
 
 @implementation SCMContext
 
@@ -20,15 +21,15 @@
     }
     return self;
 }
-- (NSString *)detectSCMRootForPath:(NSString *)path systemOut:(NSString**)systemOut {
-    
-    
-    
+
+- (NSString *)detectSCMSystemForRoot:(NSString *)root {
+    return detect(root);
 }
 - (void)refreshAtRoot:(NSString *)root system:(NSString *)system {
     [self clearItemsAtRoot:root];
+    
+    get_status(self);
 }
-
 - (NSString *)statusForPath:(NSString *)path {
     return [statuses valueForKey:path];
 }

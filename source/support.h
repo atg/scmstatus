@@ -1,3 +1,5 @@
+#import <Foundation/Foundation.h>
+@class SCMContext;
 
 void get_status(SCMContext* ctx);
 NSString* detect(NSString* path);
