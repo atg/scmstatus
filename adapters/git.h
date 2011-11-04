@@ -1,5 +1,5 @@
-#import "../adapter.h"
-#import "../context.h"
+#import "../source/adapter.h"
+#import "../source/context.h"
 
 @interface SCMAdapter_git : SCMAdapter {
     SCMContext* context;
