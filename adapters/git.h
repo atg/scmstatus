@@ -1,11 +1,13 @@
-// Gets the SCM status and applies to to SCMContext
-static void git_status(SCMContext* ctx)
-{
-  
+#import "../adapter.h"
+#import "../context.h"
+
+@interface SCMAdapter_git : SCMAdapter {
+    SCMContext* context;
+    NSString* directory;
 }
 
-// Decides whether a list of files is an SCM directory
-static BOOL git_detect(NSString* path, NSSet* filenames)
-{
-  return [filenames containsObject:@"git"];
-}
+- (void)refreshStatus;
+- (void)add:(NSArray*)paths;
+- (void)commit:(NSString *)message;
+
+@end
