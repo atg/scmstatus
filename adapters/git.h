@@ -1,9 +1,6 @@
-#import "../source/adapter.h"
-#import "../source/context.h"
+#import "../source/adapter_subclass.h"
 
 @interface SCMAdapter_git : SCMAdapter {
-    SCMContext* context;
-    NSString* directory;
 }
 
 - (void)refreshStatus;

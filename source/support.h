@@ -1,8 +1,10 @@
 #import <Foundation/Foundation.h>
 @class SCMContext;
 
-void get_status(SCMContext* ctx);
-NSString* detect(NSString* path);
+
+static inline Class adapterClass(NSString *scmsystem) {
+	return NSClassFromString([@"SCMAdapter_" stringByAppendingString:scmsystem]);
+}
 
 
 // Status values

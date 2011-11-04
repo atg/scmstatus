@@ -8,10 +8,8 @@
     static id sharedContext;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
         sharedContext = [[SCMContext alloc] init];
     });
-    
     return sharedContext;
 }
 - (id)init {
